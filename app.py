@@ -26,10 +26,7 @@ def home():
         x = scaler.transform(data)
         print(x)
         prediction = model.predict(x)
-        if prediction == 1:
-            print("El cliente contrata un deposito a largo plazo, feliz y bendecido dia")
-        else:
-            print("El cliente no quiso contratar el servicio, toca molestar a otro")
+        print(prediction)
     return render_template('index.html',prediction=prediction[0])
 
 
